@@ -4,7 +4,8 @@
 #define LED_PIN 2 // Pin number for the LED (on-board LED on ESP32)
 
 // Procedural programming: works well for small projects, but can become hard to manage as the project grows
-// Object-oriented programming: better for larger projects, but can be overkill for small projects
+// Object-oriented programming (OOP): better for larger projects, but can be overkill for small projects
+// With OOP, you will write custom library for Arduino, which is better for reuseability. 
 
 // ===========================================================================
 // This is a simple LED blink example using procedural programming
@@ -31,8 +32,7 @@ Led led(LED_PIN); // Create an instance of the Led class
 
 void setup()
 {
-  // The constructor of the Led class already initializes the pin
-  led.init();
+  led.begin(); // Initialize the LED pin
 }
 void loop()
 {
